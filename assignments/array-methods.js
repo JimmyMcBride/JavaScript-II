@@ -57,8 +57,9 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // The event director needs both the first and last names
 // of each runner for their running bibs.  Combine both
 // the first and last names into a new array called fullName. 
-let fullName = runners.forEach((arr, index) => {
-	console.log(`${arr.last_name}, ${arr.first_name}`)
+let fullName = []
+runners.forEach((arr, index) => {
+	fullName.push(`${arr.last_name}, ${arr.first_name}`)
 })
 
 console.log(fullName);
@@ -132,10 +133,11 @@ console.log(emailList);
 
 // Problem 3: Create an array of runners in the company Skinix?
 
-const gabtypeRunners = runners.forEach((arr, i) => {
+const skinixRunners = []
+runners.forEach((arr, i) => {
 	if (arr.company_name == 'Skinix'){
-		console.log(`${arr.first_name} ${arr.last_name} is with the company, Skinix`)
+		skinixRunners.push(`${arr.first_name} ${arr.last_name} is with the company, Skinix`)
 	}
 })
 
-console.log(gabtypeRunners)
+console.log(skinixRunners)
