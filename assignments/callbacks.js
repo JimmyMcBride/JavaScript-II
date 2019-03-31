@@ -70,9 +70,13 @@ contains('Gum', items, function(bool){
 
 
 /* STRETCH PROBLEM */
+const list = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
 
-function removeDuplicates(array, cb) {
+
+const removeDuplicates = (arr, cb) => cb(arr)
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-}
+
+ 
+console.log(removeDuplicates(list, (arr) => list.filter((value, index) => list.indexOf(value) === index)))
